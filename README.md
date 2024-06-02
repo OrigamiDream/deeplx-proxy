@@ -15,6 +15,7 @@ docker run --name deeplx-proxy -p 1188:1188 --rm -v $(pwd)/proxies:/data acacias
 docker compose up -d
 ```
 
+### Request via HTTP
 ```http request
 POST http://localhost:1188/translate
 Content-Type: application/json
