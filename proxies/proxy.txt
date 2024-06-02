@@ -1,0 +1,4 @@
+http://<username>:<password>@<host>:<port>
+https://<username>:<password>@<host>:<port>
+socks4://<username>:<password>@<host>:<port>
+socks5://<username>:<password>@<host>:<port>

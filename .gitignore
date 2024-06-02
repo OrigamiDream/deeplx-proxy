@@ -5,7 +5,8 @@
 https/
 
 ### Proxies ###
-proxies/
+proxies/*
+!proxies/proxy.txt
 
 ### dotenv ###
 .env
