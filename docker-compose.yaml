@@ -1,0 +1,8 @@
+services:
+  deeplx-proxy:
+    image: acaciastech/deeplx-proxy:1.0.0
+    container_name: deeplx-proxy
+    ports:
+      - 1188:1188
+    volumes:
+      - ./proxies:/data

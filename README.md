@@ -3,9 +3,16 @@
 DeepLX with weighted proxy Load balancing supports
 
 ## Usage
+
+### Docker
 ```
 docker pull acaciastech/deeplx-proxy:1.0.0
 docker run --name deeplx-proxy -p 1188:1188 --rm -v $(pwd)/proxies:/data acaciastech/deeplx-proxy:1.0.0
+```
+
+### Docker Compose
+```
+docker compose up -d
 ```
 
 ```http request
