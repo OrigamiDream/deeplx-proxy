@@ -45,6 +45,8 @@ if not os.path.exists(settings.proxy_file):
 with open(settings.proxy_file, 'r') as f:
     proxies = f.read().splitlines()
     proxies = [p.strip() for p in proxies if len(p) > 0 and not p.strip().startswith('#')]
+    proxies = list(set(proxies))
+    logging.info("Total {} proxies have been registered.".format(len(proxies)))
 proxy_handler = ProxyHandler(proxies)
 
 app = FastAPI()
