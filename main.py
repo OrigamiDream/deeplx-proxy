@@ -26,6 +26,7 @@ class TranslateRequest(BaseModel):
     target_lang: str
     max_retry: int = -1
     num_proxies: int = 5
+    deeplx_url: str = 'https://api.deeplx.org/translate'
 
 
 class TranslateResponse(BaseModel):
@@ -73,6 +74,7 @@ async def _attempt_via_proxy(request: TranslateRequest, override_proxy: Optional
 
         try:
             retval = await deeplx.translate(
+                request.deeplx_url,
                 request.text,
                 request.source_lang,
                 request.target_lang,
